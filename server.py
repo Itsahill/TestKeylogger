@@ -1,7 +1,7 @@
 import socket
 
 # Creating a socket
-host = "192.168.4.252"
+host = socket.gethostname()
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.bind((host, 9999))
 sock.listen(1)
